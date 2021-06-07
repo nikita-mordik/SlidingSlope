@@ -46,7 +46,7 @@ public class LaunchObjects : MonoBehaviour
         {
             float positionX = Random.Range(-transform.localScale.x + .5f, transform.localScale.x - .5f);
             float posX = Random.Range(-maxBorder.x + .5f, maxBorder.x -.5f);
-            float posY = Random.Range(transform.position.y - .5f, transform.position.y + .5f);
+            float posY = Random.Range(transform.position.y - 1.5f, transform.position.y + .5f);
             var flagPosition = new Vector3(posX, posY, transform.position.z);
 
             Instantiate(flag, flagPosition, Quaternion.identity);
@@ -61,7 +61,7 @@ public class LaunchObjects : MonoBehaviour
         {
             float positionX = Random.Range(-transform.localScale.x + .5f, transform.localScale.x - .5f);
             float posX = Random.Range(-maxBorder.x + .5f, maxBorder.x - .5f);
-            float posY = Random.Range(transform.position.y - 1.5f, transform.position.y + 1f);
+            float posY = Random.Range(transform.position.y - 2.5f, transform.position.y + 1f);
             var treePosition = new Vector3(posX, posY, transform.position.z);
 
             var randomTree = Random.Range(0, trees.Length);
@@ -77,7 +77,7 @@ public class LaunchObjects : MonoBehaviour
         {
             float positionX = Random.Range(-transform.localScale.x + 2.5f, transform.localScale.x - .6f);
             float posX = Random.Range(-maxBorder.x + .5f, maxBorder.x - .5f);
-            float posY = Random.Range(transform.position.y - 1.5f, transform.position.y + .5f);
+            float posY = Random.Range(transform.position.y - 2.5f, transform.position.y + .5f);
             var rockPosition = new Vector3(posX, posY, transform.position.z);
 
             var randomRock = Random.Range(0, rocks.Length);
@@ -93,7 +93,7 @@ public class LaunchObjects : MonoBehaviour
         {
             float positionX = Random.Range(-transform.localScale.x + 2.8f, transform.localScale.x - .3f);
             float posX = Random.Range(-maxBorder.x + .5f, maxBorder.x - .5f);
-            float posY = Random.Range(transform.position.y - 2f, transform.position.y + 1f);
+            float posY = Random.Range(transform.position.y - 3f, transform.position.y + 1f);
             var treeRockPosition = new Vector3(posX, posY, transform.position.z);
 
             var randomTreeRock = Random.Range(0, tree_Rock.Length);

@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource pickAudio;
 
     public GameObject sled;
+    private Vector3 sledPos;
 
     private void Start()
     {
@@ -57,25 +58,26 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         transform.Translate(direction * speed * Time.deltaTime);
+        transform.Translate(Vector2.down * Time.deltaTime * 1f);
 
         //провер€ю на столкновение с границей экрана:
-        //if (Mathf.Abs(transform.position.x) + transform.localScale.x / 1.5f > maxBorder.x
-        //    || Mathf.Abs(transform.position.x) - transform.localScale.x / 1.5f > maxBorder.x)
-        //{
-        //    direction = new Vector2(-direction.x, direction.y);
-        //    var newScale = transform.localScale.x;
-        //    newScale *= -1f;
-        //    transform.localScale = new Vector3(newScale, 1, 1);
-        //}
+        if (Mathf.Abs(transform.position.x) + transform.localScale.x / 2f > maxBorder.x
+            || Mathf.Abs(transform.position.x) - transform.localScale.x / 2f > maxBorder.x)
+        {
+            direction = new Vector2(-direction.x, direction.y);
+            var newScale = transform.localScale.x;
+            newScale *= -1f;
+            transform.localScale = new Vector3(newScale, 1, 1);
+        }
 
-        if (transform.position.y > 1f)  //двигаю игрока по оси у до определЄнного значени€
-        {
-            transform.Translate(new Vector2(transform.position.x, -transform.position.y) * Time.fixedDeltaTime * 0.1f);
-        }
-        else if (transform.position.y < 1f)
-        {
-            transform.position = new Vector2(transform.position.x, 1f);
-        }
+        //if (transform.position.y > -10000f)  //двигаю игрока по оси у до определЄнного значени€
+        //{
+        //    //transform.Translate(new Vector2(0, -transform.position.y* Time.deltaTime * speed));
+        //}
+        //else if (transform.position.y < 1f)
+        //{
+        //    transform.position = new Vector2(transform.position.x, 1f);
+        //}
     }
 
     private void ChangeDirectionOnTouch()
@@ -114,13 +116,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)  //проверка на столкновение с границей экрана
     {
-        if (collision.CompareTag("Border"))
-        {
-            direction = new Vector2(-direction.x, direction.y);
-            var newScale = transform.localScale.x;
-            newScale *= -1f;
-            transform.localScale = new Vector3(newScale, 1, 1);
-        }
+        //if (collision.CompareTag("Border"))
+        //{
+        //    direction = new Vector2(-direction.x, direction.y);
+        //    var newScale = transform.localScale.x;
+        //    newScale *= -1f;
+        //    transform.localScale = new Vector3(newScale, 1, 1);
+        //}
 
         if (collision.GetComponent<Flag>())
         {

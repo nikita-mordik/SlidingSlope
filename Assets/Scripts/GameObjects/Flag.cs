@@ -18,19 +18,19 @@ public class Flag : MonoBehaviour
         switch (number)
         {
             case 5:
-                speed = 1.6f;
+                speed = .3f;
                 break;
             case 10:
-                speed = 1.9f;
+                speed = .5f;
                 break;
             case 15:
-                speed = 2.3f;
+                speed = .7f;
                 break;
             case 20:
-                speed = 2.9f;
+                speed = .9f;
                 break;
             case 30:
-                speed = 3.8f;
+                speed = 1.2f;
                 break;
         }
     }

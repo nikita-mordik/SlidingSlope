@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f6d369050fee64da28d6d1b41e8940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.4
+  speed: 0.2
   crashAudio: {fileID: -3859014075154808423}
 --- !u!82 &-3859014075154808423
 AudioSource:
