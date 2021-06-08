@@ -1,5 +1,5 @@
-keyFreedLOW
-pasword - WkfGrvekM58XULKE
-
 alias - slidingslope
+password - WkfGrvekM58XULKE
+
+sliding21slope.keystore
 password - WkfGrvekM58XULKE

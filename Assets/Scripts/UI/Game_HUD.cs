@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -28,25 +26,20 @@ public class Game_HUD : MonoBehaviour
 
         Time.timeScale = 1.0f;
 
-        //if (LanguageSystem.m_Instance.indexLang == 0)
-        //{
-        //    bestScoretext.text = LanguageSystem.Lang.bestScore;
-        //    shareText.text = LanguageSystem.Lang.share;
-        //    menuText.text = LanguageSystem.Lang.mainMenu;
-        //    restartText.text = LanguageSystem.Lang.restart;
-        //}
-        //else if (LanguageSystem.m_Instance.indexLang == 1)
-        //{
-        //    bestScoretext.text = LanguageSystem.Lang.bestScore;
-        //    shareText.text = LanguageSystem.Lang.share;
-        //    menuText.text = LanguageSystem.Lang.mainMenu;
-        //    restartText.text = LanguageSystem.Lang.restart;
-        //}
-    }
-
-    private void Start()
-    {
-        //maxScore.text = save.maxScore.ToString();
+        if (LanguageSystem.m_Instance.indexLang == 0)
+        {
+            bestScoretext.text = LanguageSystem.Lang.bestScore;
+            shareText.text = LanguageSystem.Lang.share;
+            menuText.text = LanguageSystem.Lang.mainMenu;
+            restartText.text = LanguageSystem.Lang.restart;
+        }
+        else if (LanguageSystem.m_Instance.indexLang == 1)
+        {
+            bestScoretext.text = LanguageSystem.Lang.bestScore;
+            shareText.text = LanguageSystem.Lang.share;
+            menuText.text = LanguageSystem.Lang.mainMenu;
+            restartText.text = LanguageSystem.Lang.restart;
+        }
     }
 
     private void Update()

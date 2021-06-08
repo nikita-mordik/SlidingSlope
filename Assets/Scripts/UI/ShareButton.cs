@@ -24,6 +24,14 @@ public class ShareButton : MonoBehaviour
 
         Destroy(ss);
 
-        new NativeShare().AddFile(filePath).SetSubject("Новый рекорд!").SetText("Мой результат!").Share();
+        //new NativeShare().AddFile(filePath).SetSubject("Новый рекорд!").SetText("Мой результат!").Share();
+        if (PlayerPrefs.GetString("Language") == "ru_RU")
+        {
+            new NativeShare().AddFile(filePath).SetSubject(LanguageSystem.Lang.setSubject).SetText(LanguageSystem.Lang.setText).Share();
+        }
+        else if (PlayerPrefs.GetString("Language") == "en_US")
+        {
+            new NativeShare().AddFile(filePath).SetSubject(LanguageSystem.Lang.setSubject).SetText(LanguageSystem.Lang.setText).Share();
+        }
     }
 }

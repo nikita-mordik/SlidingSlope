@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7978147162898856318}
   - component: {fileID: 7978147162898856319}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 2321630990398301535}
   - component: {fileID: 4746486464263818154}
   - component: {fileID: -3859014075154808423}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tree_Rock_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f6d369050fee64da28d6d1b41e8940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
+  speed: 0.1
   crashAudio: {fileID: -3859014075154808423}
 --- !u!82 &-3859014075154808423
 AudioSource:

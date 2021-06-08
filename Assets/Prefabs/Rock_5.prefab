@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2844763205598101935}
   - component: {fileID: -3107442907031982558}
   - component: {fileID: -1720347235294602381}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f6d369050fee64da28d6d1b41e8940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
+  speed: 0.1
   crashAudio: {fileID: -1720347235294602381}
 --- !u!82 &-1720347235294602381
 AudioSource:

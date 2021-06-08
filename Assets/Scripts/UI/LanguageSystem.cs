@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using UnityEngine.UI;
 
 public class LanguageSystem : MonoBehaviour
 {
@@ -80,4 +78,6 @@ public class Lang
     public string share;
     public string mainMenu;
     public string restart;
+    public string setSubject;
+    public string setText;
 }

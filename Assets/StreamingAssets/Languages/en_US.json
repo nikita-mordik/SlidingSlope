@@ -7,5 +7,7 @@
 	"bestScore":"Best score",
 	"share":"Share",
 	"mainMenu":"Back to Main Menu",
-	"restart":"Restart"
+	"restart":"Restart",
+	"setSubject":"New record!",
+	"setText":"My result!"
 }

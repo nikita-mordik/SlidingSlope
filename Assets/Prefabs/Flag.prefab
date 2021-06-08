@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6879275510429952525}
   - component: {fileID: 8764341920565888872}
   - component: {fileID: -796160859727722089}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18f80ad9dcd7f1d4fb54cba324cb9cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
+  speed: 0.1
 --- !u!82 &-796160859727722089
 AudioSource:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class Flag : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, 15f);
+        Destroy(gameObject, 30f);
     }
 
     private void FixedUpdate()
@@ -18,16 +18,16 @@ public class Flag : MonoBehaviour
         switch (number)
         {
             case 5:
-                speed = .3f;
+                speed = .2f;
                 break;
             case 10:
-                speed = .5f;
+                speed = .3f;
                 break;
             case 15:
-                speed = .7f;
+                speed = .5f;
                 break;
             case 20:
-                speed = .9f;
+                speed = .8f;
                 break;
             case 30:
                 speed = 1.2f;
@@ -46,12 +46,10 @@ public class Flag : MonoBehaviour
         {
             //если пересеклось с колайдером друг дргуа, то мен€ю позицию объекта у другого колайдера
             RaycastHit2D hit;
-            hit = Physics2D.BoxCast(transform.position, transform.localScale*1.5f, 0f, new Vector2(1, 1), .5f);
+            hit = Physics2D.BoxCast(transform.position, transform.localScale, 0f, new Vector2(1, 0), .5f);
             if (hit)
             {
-                print(hit.collider.name);
-                print(gameObject.name);
-                hit.transform.position = (hit.transform.position - new Vector3(.5f, 1.5f, 0));
+                Destroy(hit.transform.gameObject);
             }
         }
     }

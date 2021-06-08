@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -13,9 +12,6 @@ public class PlayerController : MonoBehaviour
 
     public AudioSource pickAudio;
 
-    public GameObject sled;
-    private Vector3 sledPos;
-
     private void Start()
     {
         direction = Vector2.zero;
@@ -27,6 +23,9 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        minBorder = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
+        maxBorder = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
+
         ChangeDirectionOnTouch();
     }
 
@@ -48,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator StartMoving()
     {
-        direction = Vector2.down;
+        direction = Vector2.down * 1.6f;
 
         yield return new WaitForSeconds(.8f);
 
@@ -58,11 +57,16 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         transform.Translate(direction * speed * Time.deltaTime);
-        transform.Translate(Vector2.down * Time.deltaTime * 1f);
+        transform.Translate(Vector2.down * Time.deltaTime * .9f);
+
+        if (transform.position.y < minBorder.y + 5f)
+        {
+            transform.position = new Vector2(transform.position.x, minBorder.y + 5f);
+        }
 
         //провер€ю на столкновение с границей экрана:
-        if (Mathf.Abs(transform.position.x) + transform.localScale.x / 2f > maxBorder.x
-            || Mathf.Abs(transform.position.x) - transform.localScale.x / 2f > maxBorder.x)
+        if (Mathf.Abs(transform.position.x) + transform.localScale.x / 4f > maxBorder.x
+            || Mathf.Abs(transform.position.x) - transform.localScale.x / 4f > maxBorder.x)
         {
             direction = new Vector2(-direction.x, direction.y);
             var newScale = transform.localScale.x;

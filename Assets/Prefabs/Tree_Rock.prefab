@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 976198439180933749}
   - component: {fileID: 976198439180933754}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 6530602798311516451}
   - component: {fileID: -1511965882591557463}
   - component: {fileID: -3869230929783851570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tree_Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,8 +220,9 @@ PolygonCollider2D:
       - {x: 0.17362943, y: -0.07300387}
       - {x: 0.17172544, y: 0.1074863}
       - {x: 0.08181465, y: 0.29867956}
-      - {x: 0.036270287, y: 0.36422393}
-      - {x: 0.013135144, y: 0.36158296}
+      - {x: 0.053471867, y: 0.31691965}
+      - {x: 0.042370338, y: 0.30541283}
+      - {x: 0.013135222, y: 0.30675304}
       - {x: -0.0072277384, y: 0.31098866}
       - {x: -0.05686485, y: 0.2524405}
       - {x: -0.0949498, y: 0.19640154}
@@ -247,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f6d369050fee64da28d6d1b41e8940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
+  speed: 0.1
   crashAudio: {fileID: -3869230929783851570}
 --- !u!82 &-3869230929783851570
 AudioSource:

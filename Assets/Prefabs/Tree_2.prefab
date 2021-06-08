@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3413728927727559465}
   - component: {fileID: 7794043110415159140}
   - component: {fileID: -6350805988890326369}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tree_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f6d369050fee64da28d6d1b41e8940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
+  speed: 0.1
   crashAudio: {fileID: -6350805988890326369}
 --- !u!82 &-6350805988890326369
 AudioSource:
